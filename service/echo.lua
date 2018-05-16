@@ -10,7 +10,7 @@ end
 function dispatcher()
     skynet.dispatch('lua',
         function( session, address, cmd, ...)
-            cmd = cmd:uppder()
+            cmd = cmd:upper()
             if (cmd == "HELLO") then
                 local f = command[cmd]
                 assert(f)
