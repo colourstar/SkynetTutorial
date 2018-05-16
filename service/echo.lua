@@ -1,6 +1,7 @@
 local skynet = require "skynet"
 require 'skynet.manager'
 
+print('echo => run')
 local command = {}
 
 function command.HELLO(what)
@@ -8,6 +9,7 @@ function command.HELLO(what)
 end
 
 function dispatcher()
+    print('echo => dispatcher')
     skynet.dispatch('lua',
         function( session, address, cmd, ...)
             cmd = cmd:upper()
@@ -19,7 +21,9 @@ function dispatcher()
         end
     )
 
+    print('echo => register')
     skynet.register('echo')
 end
 
+print('echo => skynet.start')
 skynet.start(dispatcher)
