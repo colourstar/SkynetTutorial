@@ -4,7 +4,7 @@ print('main => run')
 skynet.start(
     function()
         print('main => start')
-        local echo = skynet.newservice('echo')
+        local echo = skynet.newservice('echo1')
         print(skynet.call(echo,'lua','HELLO','world'))
     end
 )

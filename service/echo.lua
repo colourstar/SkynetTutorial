@@ -22,7 +22,7 @@ function dispatcher()
     )
 
     print('echo => register')
-    skynet.register('echo')
+    skynet.register('echo1')
 end
 
 print('echo => skynet.start')
